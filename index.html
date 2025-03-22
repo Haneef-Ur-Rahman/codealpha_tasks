@@ -3,24 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> Image Gallery </title>
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body style="background-color: black;">
-    <div class="player">
-        <h2 id="song-title"> Music Player </h2>
-        <audio id="audio-player" src="Music_1.mp3"></audio>
-        <audio id="audio-player" src="Music_2.mp3"></audio>
-        <audio id="audio-player" src="Music_3.mp3"></audio>
-        <div class="controls">
-            <button onclick="prevSong()" style="border: 2px solid blue;"> << </button>
-            <button onclick="togglePlayPause()" style="border: 2px solid rgb(255, 0, 0);"> || </button>
-            <button onclick="nextSong()" style="border: 2px solid blue;"> >> </button>
-        </div>
+    <div class="gallery">
+        
+    <h1 style="color: green; text-decoration: underline; text-decoration-color: blue;"> Image Gallery </h1> 
+        <img src="1.jpg" alt="nature" onclick="openLightbox(this)">
+        <img src="2.jpg" alt="nature" onclick="openLightbox(this)">
+        <img src="3.jpg" alt="nature" onclick="openLightbox(this)">
+        <img src="4.jpg" alt="nature2" onclick="openLightbox(this)">
+        <img src="5.jpg" alt="nature" onclick="openLightbox(this)">
+        <img src="6.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="7.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="8.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="9.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="10.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="11.jpg" alt="city" onclick="openLightbox(this)">
+        <img src="12.jpg" alt="city" onclick="openLightbox(this)">
+        <img src="13.jpg" alt="city" onclick="openLightbox(this)">
+        <img src="14.jpg" alt="city" onclick="openLightbox(this)">
+        <img src="15.jpg" alt="city" onclick="openLightbox(this)">
+        <img src="16.jpg" alt="web" onclick="openLightbox(this)">
+        <img src="17.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="18.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="19.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="20.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="1.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="6.jpg" alt="web" onclick="openLightbox(this)">
+        <img src="11.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="16.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="2.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="7.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="12.jpg" alt="nature2" onclick="openLightbox(this)">
+        <img src="17.jpg" alt="nature" onclick="openLightbox(this)">
+        <img src="3.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="8.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="13.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="18.jpg" alt="web" onclick="openLightbox(this)">
+        <img src="4.jpg" alt="car" onclick="openLightbox(this)">
+        <img src="10.jpg" alt="bird" onclick="openLightbox(this)">
+        <img src="20.jpg" alt="bird" onclick="openLightbox(this)">
     </div>
-    <script src="script.js"></script>
 
+    <div class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <!-- <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox-img").src = img.src;
+            document.querySelector(".lightbox").classList.add("show");
+        }
+        function closeLightbox() {
+            document.querySelector(".lightbox").classList.remove("show");
+        }
+    </script> -->
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox-img").src = img.src;
+            document.querySelector(".lightbox").classList.add("show");
+        }
+        function closeLightbox() {
+            document.querySelector(".lightbox").classList.remove("show");
+        }
+    </script>
 </body>
 </html>
